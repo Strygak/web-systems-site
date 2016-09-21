@@ -1,0 +1,28 @@
+<main ng-controller="myCtrl">
+	<article>
+		<h1>CONTACTS</h1>
+	</article>
+	<article>
+		<p>	Please complete the following form so that we can better understand your needs and direct your request to the right people:</p>
+	</article>
+	<form id="myForm" ng-submit="sendMail()">
+		<p>First name:  <span class="stars">*</span><input type="text" name="firstName" class="msg" ng-model="email.firstName"></p>
+		<p>Last name:  <span class="stars">*</span><input type="text" name="last_name" class="msg" ng-model="email.lastName"></p>
+		<p>E-mail:  <span id="star">*</span><input type="text" name="email" class="msg" id="email" ng-model="email.email"></p>
+		<p><span id="subject">Subject:</span>
+			<select name="select" ng-model="email.select">
+				<option value="General Information">General Information</option>
+                <option value="Marketing Information">Marketing Information</option>
+                <option value="Careers">Careers</option>
+                <option value="Request for case study">Request for case study</option>
+			</select>
+		</p>
+		<p>Comments:  <span class="stars">*</span>
+			<textarea name="comments" rows="5" class="msg" ng-model="email.comments"></textarea>
+		</p>
+		<p><input type="button" value="Send" class="btn_submit" ng-click="sendEmail()"></p>
+	</form>		
+</main>
+<footer>
+    <p>&copy; Copyright 2016, Web Systems Ltd.</p>
+</footer>

@@ -1,62 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" ng-app="app">
 	<head>
+	    <meta charset="utf-8">
 		<meta name="viewport" content="width=device-width"/>
 		<title>Web Systems</title>
 		<link rel="shortcut icon" type="image/png" href="/images/favicon.png">
+		<script src="js/angular.min.js"></script>
 	</head>
 	<body>
 		<header>
 			<img src="images/earth.png" alt="Web Systems logo">
-			<a href="index.html">Web Systems</a>
+			<a href="#/">Web Systems</a>
 			<form id="se">
 			    <input placeholder="Search"><button>GO</button>
 			</form>
 			<nav>
 				<ul>
-					<p><a href="index.html">HOME</a></p>
-					<p><a href="about_us.html">ABOUT</a></p>
-					<p><a href="solutions.html">SOLUTIONS</a></p>
-					<p><a href="technology.html">TECHNOLOGY</a></p>
-					<p><a href="careers.html">CAREERS</a></p>
-					<p><a href="contacts.html">CONTACTS</a></p>
+					<p><a href="#/">HOME</a></p>
+					<p><a href="#about">ABOUT</a></p>
+					<p><a href="#solutions">SOLUTIONS</a></p>
+					<p><a href="#technology">TECHNOLOGY</a></p>
+					<p><a href="#careers">CAREERS</a></p>
+					<p><a href="#contacts">CONTACTS</a></p>
 				</ul>
 			</nav>
 		</header>
-		<main>
-			<article>
-				<h1>HOME</h1>
-			</article>
-			<figure id="site">
-				<a href="">
-					<img src="images/website.png">
-					<figcaption>CREATE WEBSITE</figcaption>
-				</a>
-			</figure>
-			<figure>
-				<a href="">
-					<img src="images/smartphone.png">
-					<figcaption>CREATE MOBILE APP</figcaption>
-				</a>
-			</figure>
-			<figure>
-				<a href="">
-					<img src="images/seo.png">
-					<figcaption>SEO</figcaption>
-				</a>
-			</figure>
-			<figure>
-				<a href="">
-					<img src="images/businessman.png">
-					<figcaption>FREE ESTIMATION</figcaption>
-				</a>
-			</figure>
-		</main>
-		<footer><p>&copy; Copyright 2016, Web Systems Ltd.</p></footer>
+
+		<div ng-view></div>
+		
 	</body>
 </html>
+<script src="js/angular-route.min.js"></script>
+<script src="js/appAngular.js"></script>
 <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="css/style.css">
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
-<script type="text/javascript" src="js/formValid.js"></script>
